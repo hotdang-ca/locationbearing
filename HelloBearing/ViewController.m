@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *courseLabel;
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastStreetLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastCrossStreetLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *startStopButton;
 @end
 
@@ -24,6 +27,8 @@ static void *LocationSpeedContext = &LocationSpeedContext;
 static void *LocationCourseContext = &LocationCourseContext;
 static void *LocationPositionContext = &LocationPositionContext;
 static void *LocationIsMonitoringContext = &LocationIsMonitoringContext;
+static void *LocationLastCurrentStreet = &LocationLastCurrentStreet;
+static void *LocationLastCrossStreet = &LocationLastCrossStreet;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,12 +58,19 @@ static void *LocationIsMonitoringContext = &LocationIsMonitoringContext;
     [[LocationManager sharedManager] addObserver:self forKeyPath:@"lastCoordinates" options:NSKeyValueObservingOptionNew context:LocationPositionContext];
     
     [[LocationManager sharedManager] addObserver:self forKeyPath:@"isMonitoringLocationUpdates" options:NSKeyValueObservingOptionNew context:LocationIsMonitoringContext];
+    
+    [[LocationManager sharedManager] addObserver:self forKeyPath:@"lastCurrentStreet" options:NSKeyValueObservingOptionNew context:LocationLastCurrentStreet];
+    
+    [[LocationManager sharedManager] addObserver:self forKeyPath:@"lastNearStreet" options:NSKeyValueObservingOptionNew context:LocationLastCrossStreet];
+    
 }
 
 - (void)removeObservers {
     [[LocationManager sharedManager] removeObserver:self forKeyPath:@"lastSpeed" context:LocationSpeedContext];
     [[LocationManager sharedManager] removeObserver:self forKeyPath:@"lastDirection" context:LocationCourseContext];
     [[LocationManager sharedManager] removeObserver:self forKeyPath:@"lastCoordinates" context:LocationPositionContext];
+    [[LocationManager sharedManager] removeObserver:self forKeyPath:@"lastCurrentStreet" context:LocationLastCurrentStreet];
+    [[LocationManager sharedManager] removeObserver:self forKeyPath:@"lastNearStreet" context:LocationLastCrossStreet];
 }
 
 /**
@@ -110,7 +122,14 @@ static void *LocationIsMonitoringContext = &LocationIsMonitoringContext;
         _speedLabel.text = [NSString stringWithFormat:@"%@m/s", @([LocationManager sharedManager].lastSpeed)];
     } else if (context == LocationIsMonitoringContext) {
         [_startStopButton setTitle:[LocationManager sharedManager].isMonitoringLocationUpdates ? @"Stop Course Updates" : @"Start Course Updates" forState:UIControlStateNormal];
-    } else {
+    } else if (context == LocationLastCurrentStreet) {
+        _lastStreetLabel.text = [LocationManager sharedManager].lastCurrentStreet;
+        
+    } else if (context == LocationLastCrossStreet) {
+        _lastCrossStreetLabel.text = [LocationManager sharedManager].lastNearStreet;
+        
+    }
+    else {
         [super observeValueForKeyPath:keyPath
                              ofObject:object
                                change:change

@@ -68,22 +68,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Thoroughfare:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gze-7e-DyA">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="–" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfL-LM-LZC">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right-ahead Thoroughfare:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRm-4Q-Ibi">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="–" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp8-bG-Dqy">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KNp-3z-pf5" secondAttribute="trailing" constant="16" id="0gN-WG-V3w"/>
                             <constraint firstItem="KNp-3z-pf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="8ox-j3-k15"/>
                             <constraint firstItem="SX8-XU-1rl" firstAttribute="leading" secondItem="sGv-iY-4d4" secondAttribute="leading" id="97m-w4-TGs"/>
+                            <constraint firstItem="Gze-7e-DyA" firstAttribute="leading" secondItem="Zfb-4J-MSW" secondAttribute="leading" id="EDB-3e-yRu"/>
                             <constraint firstItem="yFF-zi-FTk" firstAttribute="leading" secondItem="Scu-55-tjh" secondAttribute="leading" id="EYg-nP-Pen"/>
                             <constraint firstItem="sGv-iY-4d4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EvV-7I-FFb"/>
+                            <constraint firstItem="WfL-LM-LZC" firstAttribute="leading" secondItem="Gze-7e-DyA" secondAttribute="leading" id="Hgh-WD-0Fu"/>
+                            <constraint firstItem="DRm-4Q-Ibi" firstAttribute="leading" secondItem="WfL-LM-LZC" secondAttribute="leading" id="JJc-NE-YRx"/>
                             <constraint firstItem="A7a-GE-CEQ" firstAttribute="leading" secondItem="QlG-1Y-WuX" secondAttribute="leading" id="LzN-ED-c8g"/>
+                            <constraint firstItem="WfL-LM-LZC" firstAttribute="top" secondItem="Gze-7e-DyA" secondAttribute="bottom" constant="7.5" id="Q22-IB-X2g"/>
                             <constraint firstItem="Jhx-Lf-dev" firstAttribute="top" secondItem="yFF-zi-FTk" secondAttribute="bottom" constant="20" id="Tsw-4b-ct2"/>
                             <constraint firstItem="yFF-zi-FTk" firstAttribute="top" secondItem="Scu-55-tjh" secondAttribute="bottom" constant="7.5" id="WtE-gP-Y8k"/>
                             <constraint firstItem="Zfb-4J-MSW" firstAttribute="leading" secondItem="Jhx-Lf-dev" secondAttribute="leading" id="Yun-9A-ghj"/>
+                            <constraint firstItem="Zp8-bG-Dqy" firstAttribute="leading" secondItem="DRm-4Q-Ibi" secondAttribute="leading" id="ZA0-Hh-8wk"/>
                             <constraint firstItem="QlG-1Y-WuX" firstAttribute="top" secondItem="SX8-XU-1rl" secondAttribute="bottom" constant="20" id="ZQG-Kb-lX5"/>
+                            <constraint firstItem="Zp8-bG-Dqy" firstAttribute="top" secondItem="DRm-4Q-Ibi" secondAttribute="bottom" constant="7.5" id="a0e-NA-G2g"/>
                             <constraint firstItem="sGv-iY-4d4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c8g-aa-wXF"/>
                             <constraint firstItem="SX8-XU-1rl" firstAttribute="top" secondItem="sGv-iY-4d4" secondAttribute="bottom" constant="7.5" id="ccP-m4-fos"/>
+                            <constraint firstItem="DRm-4Q-Ibi" firstAttribute="top" secondItem="WfL-LM-LZC" secondAttribute="bottom" constant="20" id="eUT-b0-v2m"/>
                             <constraint firstItem="A7a-GE-CEQ" firstAttribute="top" secondItem="QlG-1Y-WuX" secondAttribute="bottom" constant="7.5" id="euL-Th-fdM"/>
+                            <constraint firstItem="Gze-7e-DyA" firstAttribute="top" secondItem="Zfb-4J-MSW" secondAttribute="bottom" constant="20" id="g0E-7L-19t"/>
                             <constraint firstItem="Scu-55-tjh" firstAttribute="top" secondItem="A7a-GE-CEQ" secondAttribute="bottom" constant="20" id="geO-kS-GGB"/>
                             <constraint firstItem="QlG-1Y-WuX" firstAttribute="leading" secondItem="SX8-XU-1rl" secondAttribute="leading" id="h6t-8s-Uuo"/>
                             <constraint firstItem="Jhx-Lf-dev" firstAttribute="leading" secondItem="yFF-zi-FTk" secondAttribute="leading" id="h9C-qq-2Sc"/>
@@ -94,6 +122,8 @@
                     </view>
                     <connections>
                         <outlet property="courseLabel" destination="SX8-XU-1rl" id="VA4-0f-SRy"/>
+                        <outlet property="lastCrossStreetLabel" destination="Zp8-bG-Dqy" id="X2r-Mr-Lt1"/>
+                        <outlet property="lastStreetLabel" destination="WfL-LM-LZC" id="ahK-Nc-VU3"/>
                         <outlet property="latitudeLabel" destination="yFF-zi-FTk" id="a7c-IV-qZ7"/>
                         <outlet property="longitudeLabel" destination="Zfb-4J-MSW" id="V0z-wt-QnL"/>
                         <outlet property="speedLabel" destination="A7a-GE-CEQ" id="Cnk-sg-86I"/>

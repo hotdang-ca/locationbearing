@@ -16,6 +16,10 @@
 @property (nonatomic, readonly) CLLocationCoordinate2D lastCoordinates;
 @property (nonatomic, readonly) BOOL isMonitoringLocationUpdates;
 
+@property (strong, nonatomic, readonly) NSString *lastCurrentStreet;
+@property (strong, nonatomic, readonly) NSString *lastNearStreet;
+
+
 +(instancetype)sharedManager;
 -(void)startCourseUpdates;
 -(void)stopCourseUpdates;
