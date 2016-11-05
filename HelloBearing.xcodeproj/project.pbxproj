@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB8216051DCE468100AE8355 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8216041DCE468100AE8355 /* main.m */; };
+		CB8216081DCE468100AE8355 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8216071DCE468100AE8355 /* AppDelegate.m */; };
+		CB82160B1DCE468100AE8355 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB82160A1DCE468100AE8355 /* ViewController.m */; };
+		CB82160E1DCE468100AE8355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB82160C1DCE468100AE8355 /* Main.storyboard */; };
+		CB8216101DCE468100AE8355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB82160F1DCE468100AE8355 /* Assets.xcassets */; };
+		CB8216131DCE468100AE8355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8216111DCE468100AE8355 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB8216001DCE468100AE8355 /* HelloBearing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloBearing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB8216041DCE468100AE8355 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB8216061DCE468100AE8355 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB8216071DCE468100AE8355 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB8216091DCE468100AE8355 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CB82160A1DCE468100AE8355 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CB82160D1DCE468100AE8355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB82160F1DCE468100AE8355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB8216121DCE468100AE8355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB8216141DCE468100AE8355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB8215FD1DCE468100AE8355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB8215F71DCE468100AE8355 = {
+			isa = PBXGroup;
+			children = (
+				CB8216021DCE468100AE8355 /* HelloBearing */,
+				CB8216011DCE468100AE8355 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB8216011DCE468100AE8355 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8216001DCE468100AE8355 /* HelloBearing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB8216021DCE468100AE8355 /* HelloBearing */ = {
+			isa = PBXGroup;
+			children = (
+				CB8216061DCE468100AE8355 /* AppDelegate.h */,
+				CB8216071DCE468100AE8355 /* AppDelegate.m */,
+				CB8216091DCE468100AE8355 /* ViewController.h */,
+				CB82160A1DCE468100AE8355 /* ViewController.m */,
+				CB82160C1DCE468100AE8355 /* Main.storyboard */,
+				CB82160F1DCE468100AE8355 /* Assets.xcassets */,
+				CB8216111DCE468100AE8355 /* LaunchScreen.storyboard */,
+				CB8216141DCE468100AE8355 /* Info.plist */,
+				CB8216031DCE468100AE8355 /* Supporting Files */,
+			);
+			path = HelloBearing;
+			sourceTree = "<group>";
+		};
+		CB8216031DCE468100AE8355 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB8216041DCE468100AE8355 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB8215FF1DCE468100AE8355 /* HelloBearing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB8216171DCE468100AE8355 /* Build configuration list for PBXNativeTarget "HelloBearing" */;
+			buildPhases = (
+				CB8215FC1DCE468100AE8355 /* Sources */,
+				CB8215FD1DCE468100AE8355 /* Frameworks */,
+				CB8215FE1DCE468100AE8355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloBearing;
+			productName = HelloBearing;
+			productReference = CB8216001DCE468100AE8355 /* HelloBearing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB8215F81DCE468100AE8355 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Hot Dang Interactive";
+				TargetAttributes = {
+					CB8215FF1DCE468100AE8355 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RPQ5X74822;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CB8215FB1DCE468100AE8355 /* Build configuration list for PBXProject "HelloBearing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB8215F71DCE468100AE8355;
+			productRefGroup = CB8216011DCE468100AE8355 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB8215FF1DCE468100AE8355 /* HelloBearing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB8215FE1DCE468100AE8355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8216131DCE468100AE8355 /* LaunchScreen.storyboard in Resources */,
+				CB8216101DCE468100AE8355 /* Assets.xcassets in Resources */,
+				CB82160E1DCE468100AE8355 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB8215FC1DCE468100AE8355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB82160B1DCE468100AE8355 /* ViewController.m in Sources */,
+				CB8216081DCE468100AE8355 /* AppDelegate.m in Sources */,
+				CB8216051DCE468100AE8355 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB82160C1DCE468100AE8355 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB82160D1DCE468100AE8355 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB8216111DCE468100AE8355 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB8216121DCE468100AE8355 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB8216151DCE468100AE8355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB8216161DCE468100AE8355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB8216181DCE468100AE8355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RPQ5X74822;
+				INFOPLIST_FILE = HelloBearing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.hotdang.HelloBearing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB8216191DCE468100AE8355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RPQ5X74822;
+				INFOPLIST_FILE = HelloBearing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.hotdang.HelloBearing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB8215FB1DCE468100AE8355 /* Build configuration list for PBXProject "HelloBearing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8216151DCE468100AE8355 /* Debug */,
+				CB8216161DCE468100AE8355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB8216171DCE468100AE8355 /* Build configuration list for PBXNativeTarget "HelloBearing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8216181DCE468100AE8355 /* Debug */,
+				CB8216191DCE468100AE8355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB8215F81DCE468100AE8355 /* Project object */;
+}
