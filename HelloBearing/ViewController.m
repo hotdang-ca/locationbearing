@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "LocationManager.h"
+#import <Speech/Speech.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *speedLabel;
@@ -125,9 +126,12 @@ static void *LocationLastCrossStreet = &LocationLastCrossStreet;
     } else if (context == LocationLastCurrentStreet) {
         _lastStreetLabel.text = [LocationManager sharedManager].lastCurrentStreet;
         
+        [self speakText:[NSString stringWithFormat:@"Currently on %@",[LocationManager sharedManager].lastCurrentStreet]];
+        
     } else if (context == LocationLastCrossStreet) {
         _lastCrossStreetLabel.text = [LocationManager sharedManager].lastNearStreet;
         
+        [self speakText:[NSString stringWithFormat:@"Approaching %@", [LocationManager sharedManager].lastNearStreet]];
     }
     else {
         [super observeValueForKeyPath:keyPath
@@ -136,6 +140,18 @@ static void *LocationLastCrossStreet = &LocationLastCrossStreet;
                               context:context];
     }
 }
+
+-(void)speakText:(NSString *)textToSpeak {
+    AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc]init];
+    
+    // replace common abbreviations with their full words
+    textToSpeak = [[[[textToSpeak stringByReplacingOccurrencesOfString:@" Ave" withString:@"Avenue"] stringByReplacingOccurrencesOfString:@" St" withString:@" Street"] stringByReplacingOccurrencesOfString:@" Blvd" withString:@" Boulevard"] stringByReplacingOccurrencesOfString:@" Rd" withString:@" Road"];
+    
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:textToSpeak];
+    [utterance setRate:AVSpeechUtteranceDefaultSpeechRate];
+    [synthesizer speakUtterance:utterance];
+}
+
 
 -(IBAction)startStopPressed:(id)sender {
     if ([[LocationManager sharedManager] isMonitoringLocationUpdates]) {

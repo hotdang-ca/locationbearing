@@ -8,8 +8,9 @@
 
 #import "LocationManager.h"
 #import <CoreLocation/CoreLocation.h>
-#define DESIRED_HORIZONTAL_ACCURACY 50.0
+#define DESIRED_HORIZONTAL_ACCURACY 15.0
 #define DESIRED_LOCATION_AGE 15.0
+#define DESIRED_NEAR_STREET_DISTANCE 25.0
 
 @interface LocationManager() <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -154,7 +155,7 @@
 //    CLLocation *locUpLeft = [[CLLocation alloc] initWithLatitude:upLeftCoord.latitude longitude:upLeftCoord.longitude];
 //    
 
-    CLLocationCoordinate2D upRightCoord = [self locationWithBearing:45.0 distance:15 fromLocation:location.coordinate];
+    CLLocationCoordinate2D upRightCoord = [self locationWithBearing:(_lastDirection + 15) distance:DESIRED_NEAR_STREET_DISTANCE fromLocation:location.coordinate];
     CLLocation *locUpRight = [[CLLocation alloc] initWithLatitude:upRightCoord.latitude longitude:upRightCoord.longitude];
     
     [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
@@ -167,9 +168,11 @@
              } else {
                  NSLog(@"Probably on %@", lastPlacemark.thoroughfare);
                  
-                 [self willChangeValueForKey:@"lastCurrentStreet"];
-                 _lastCurrentStreet = lastPlacemark.thoroughfare;
-                 [self didChangeValueForKey:@"lastCurrentStreet"];
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     [self willChangeValueForKey:@"lastCurrentStreet"];
+                     _lastCurrentStreet = lastPlacemark.thoroughfare;
+                     [self didChangeValueForKey:@"lastCurrentStreet"];
+                 });
              }
              
 
@@ -177,11 +180,6 @@
              dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                  [self geocodeRightOf:locUpRight comparedTo:lastPlacemark];
              });
-
-//             dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//                 [self geocodeLeftOf:locUpLeft comparedTo:lastPlacemark];
-//             });
-             
          }
     }];
 }
@@ -218,9 +216,11 @@
                 } else { // it's not the same as the last street
                     NSLog(@"Different UpRight Location: %@", rightPlacemark.thoroughfare);
                     
-                    [self willChangeValueForKey:@"lastNearStreet"];
-                    _lastNearStreet = rightPlacemark.thoroughfare;
-                    [self didChangeValueForKey:@"lastNearStreet"];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self willChangeValueForKey:@"lastNearStreet"];
+                        _lastNearStreet = rightPlacemark.thoroughfare;
+                        [self didChangeValueForKey:@"lastNearStreet"];
+                    });
                     
                 }
             } else {

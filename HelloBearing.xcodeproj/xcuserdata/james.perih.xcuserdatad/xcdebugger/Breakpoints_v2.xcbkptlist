@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelloBearing/ViewController.m"
-            timestampString = "500071210.228818"
+            filePath = "HelloBearing/LocationManager.m"
+            timestampString = "500073687.426754"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-arrayOfUsefulLocationsWithLocations:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HelloBearing/LocationManager.m"
+            timestampString = "500073698.416621"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-arrayOfUsefulLocationsWithLocations:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
